@@ -1,5 +1,5 @@
 //Assignment Code//
-
+// Set variables//
 var characterAmount = 0;
 var hasUppercase;
 var hasLowerCase;
@@ -36,33 +36,30 @@ function generatePassword() {
     //If answer is outside of the guidelines//
       if(hasUpperCase === false && hasLowerCase === false && hasNumbers === false && hasSymbols=== false) {
         alert("You must choose at least one option");
-        var hasUpperCase = confirm("Click OK to include uppercase");
-        var hasLowerCase = confirm("Click OK to include lowercase");    
-        var hasNumbers = confirm("Click OK to include numbers");
-        var hasSymbols = confirm("Click OK to include symbols");  
-      }
+        
+        }
 
-      //Array to set up loop//
-    var pwArray = [];
+      //Array to set up loop that generates password//
+  var pwArray = [];
       
-    if (hasUpperCase) {
-      pwArray = pwArray.concat(upperCase)
-    }
+    if (hasUpperCase == true)
+      pwArray = pwArray.concat(upperCase);
+    
 
-    if (hasLowerCase) {
-      pwArray = pwArray.concat(lowerCase)
-    }
+    if (hasLowerCase == true)
+      pwArray = pwArray.concat(lowerCase);
+    
       
-    if (hasNumbers) {
-      pwArray = pwArray.concat(numbers)
-    }
+    if (hasNumbers == true)
+      pwArray = pwArray.concat(numbers);
+    
 
-    if (hasSymbols) {
-      pwArray = pwArray.concat(symbols)
-  }
+    if (hasSymbols == true)
+      pwArray = pwArray.concat(symbols);
+  
 
 
-    // Loop that generate password//
+    // Loop that generates password//
     var passResult = ""
     
     for (var i = 0; i < characterAmount; i++) {
