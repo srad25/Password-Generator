@@ -22,7 +22,7 @@ function generatePassword() {
 
     if(characterAmount < 8|| characterAmount > 128) {
       alert("Password length must be between 8-128 characters");
-      //Repeat propmt//
+      //Repeat prompt//
       var characterAmount = prompt("How many characters would you like your password to contain?");
       } 
 
@@ -44,21 +44,20 @@ function generatePassword() {
 
       //Array to set up loop//
     var pwArray = [];
-function pwArray() {
       
-    if (hasUpperCase == true)
+    if (hasUpperCase) {
       pwArray = pwArray.concat(upperCase)
-    
+    }
 
-    if (hasLowerCase == true)
+    if (hasLowerCase) {
       pwArray = pwArray.concat(lowerCase)
-    
+    }
       
-    if (hasNumbers == true)
+    if (hasNumbers) {
       pwArray = pwArray.concat(numbers)
-    
+    }
 
-    if (hasSymbols == true)
+    if (hasSymbols) {
       pwArray = pwArray.concat(symbols)
   }
 
